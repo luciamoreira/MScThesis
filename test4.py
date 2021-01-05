@@ -149,12 +149,7 @@ print("EvalPoint: " + str(sum(res['time_eval_point'])))
 print("Update: " + str(sum(res['time_update'])))
 
 """
-#meu
-#resultados=eval.Evaluate(0,1000)
-#print(sum(resultados['Recall@10'])/20000) #deu 0.0043 de recall@10
 
-#resultados2=eval.Evaluate(100000,20000)
-#print(sum(resultados2['Recall@10'])/20000) #deu 0.0019 para 10000 e para 20000 0.0012 com parâmetros do artigo passou para 0.08415
 start_recommend = datetime.now()
 print('start time', start_recommend)
 
@@ -233,7 +228,7 @@ print('run time', tempo)
 #run time 10:02:32
 
 
-#8 node recall20 random seed(2)
+#8 nodes recall20 random seed(2)
 #0.472019
 #0.580753
 #0.603330
