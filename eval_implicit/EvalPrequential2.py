@@ -4,7 +4,7 @@ from recommenders_implicit import *
 import numpy as np
 import pandas as pd
 import time
-#import metrics
+
 
 class EvalPrequential2:
 
@@ -60,13 +60,11 @@ class EvalPrequential2:
 
     def Evaluate(self, start = 0, count = 0):
         results = defaultdict(dict)
-        #results = dict()
         reclist = {}
 
         entra_uid = {}
         entra_iid = {}
 
-        #print(reclist)
         if not count:
             count = self.data.size
 
@@ -83,11 +81,9 @@ class EvalPrequential2:
 
 
         for i in range(count):
-            uid, iid = self.data.GetTuple(i + start)
-            #print(uid) #está bem
+            uid, iid = self.data.GetTuple(i + start)            
             for node in range(self.nrNodes):
                 reclist[node] = self.model.Recommend(uid, node, entra_uid[uid])
-                #print('reclist[node]', reclist[node]) #está bem é uma lista
                 results[metric][node][i] = self.__EvalPoint(iid, reclist[node])
                 self.model.IncrTrain(uid, iid, node, entra_uid[uid], entra_iid[iid])
                 entra_uid[uid] += 1
@@ -97,11 +93,8 @@ class EvalPrequential2:
 
     def __EvalPoint(self, item_id, reclist):
         result = 0
-        #print('entrei_EvalPoint') #entra
         for metric in self.metrics:
             if metric == "Recall@20":
                 reclist= [x[0] for x in reclist[:20]]
-                result = int(item_id in reclist)
-        #print('saí_EvalPoint') #sai
-        #print(result)
+                result = int(item_id in reclist)                
         return result
