@@ -16,7 +16,6 @@ np.random.seed(42)
 
 numeroNodes = 12
 data = pd.read_csv("datasets/playlisted_tracks.tsv","\t")
-#print(data['playlist_id'].head())
 data.columns = ['User','Item', 'Time']
 
 kappa={}
