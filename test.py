@@ -22,12 +22,7 @@ print("Recommend: " + str(sum(res['time_recommend'])))
 print("EvalPoint: " + str(sum(res['time_eval_point'])))
 print("Update: " + str(sum(res['time_update'])))
 """
-#meu
-#resultados=eval.Evaluate(0,1000)
-#print(sum(resultados['Recall@10'])/20000) #deu 0.0043 de recall@10
 
-#resultados2=eval.Evaluate(100000,20000)
-#print(sum(resultados2['Recall@10'])/20000) #deu 0.0019 para 10000 e para 20000 0.0012 com parâmetros do artigo passou para 0.08415
 start_recommend = datetime.now()
 print('start time', start_recommend)
 
@@ -42,13 +37,3 @@ print('end time', end_recommend)
 tempo = end_recommend - start_recommend
 
 print('run time', tempo)
-#print(stream.size)
-
-#for i in range(stream.size % 1000):
-#    print("Simplex:")
-#    pprint(eval.simplex)
-#    print("Simplex scores:")
-#    pprint(eval.simplex_scores)
-#    print("Candidates:")
-#    pprint(eval.candidate_points)
-#    eval.Iterate()
