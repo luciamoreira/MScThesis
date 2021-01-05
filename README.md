@@ -1,1 +1,1 @@
-# Implicit Recommender models based on João Vinagre´s work (Thesis supervisor)
+### Implicit Recommender models based on João Vinagre´s work (Thesis supervisor)
