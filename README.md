@@ -3,4 +3,4 @@ test.py runs original ISGD modified to recall@20
 
 test2.py runs BISGD created (modified for effectively doing bagging...)
 
-test4.py runs bagged ISGD directly on top of the orginal ISGD (previously creates the respective modified datasets)
+test4.py previously creates modified datasets and runs ISGD on each dataset
