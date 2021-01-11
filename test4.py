@@ -125,19 +125,64 @@ stream_10 = ImplicitData(node10_['User'], node10_['Item'])
 stream_11 = ImplicitData(node11_['User'], node11_['Item'])
 
 model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
-
 eval_0 = EvalPrequential(model,stream_0)
+resultados_0 =eval_0.Evaluate(0,stream_0.size)
+print(sum(resultados_0['Recall@20'])/stream_0.size) # com hyperparametros otimizados do artigo e o dataset todo deu 0.200 de recall@10
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_1 = EvalPrequential(model,stream_1)
+resultados_1=eval_1.Evaluate(0,stream_1.size)
+print(sum(resultados_1['Recall@20'])/stream_1.size)
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_2 = EvalPrequential(model,stream_2)
+resultados_2=eval_2.Evaluate(0,stream_2.size)
+print(sum(resultados_2['Recall@20'])/stream_2.size)
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_3 = EvalPrequential(model,stream_3)
+resultados_3=eval_3.Evaluate(0,stream_3.size)
+print(sum(resultados_3['Recall@20'])/stream_3.size)
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_4 = EvalPrequential(model,stream_4)
+resultados_4=eval_4.Evaluate(0,stream_4.size)
+print(sum(resultados_4['Recall@20'])/stream_4.size)
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_5 = EvalPrequential(model,stream_5)
+resultados_5=eval_5.Evaluate(0,stream_5.size)
+print(sum(resultados_5['Recall@20'])/stream_5.size)
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_6 = EvalPrequential(model,stream_6)
+resultados_6=eval_6.Evaluate(0,stream_6.size)
+print(sum(resultados_6['Recall@20'])/stream_6.size)
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_7 = EvalPrequential(model,stream_7)
+resultados_7=eval_7.Evaluate(0,stream_7.size)
+print(sum(resultados_7['Recall@20'])/stream_7.size)
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_8 = EvalPrequential(model,stream_8)
+resultados_8=eval_8.Evaluate(0,stream_8.size)
+print(sum(resultados_8['Recall@20'])/stream_8.size)
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_9 = EvalPrequential(model,stream_9)
+resultados_9=eval_9.Evaluate(0,stream_9.size)
+print(sum(resultados_9['Recall@20'])/stream_9.size)
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_10 = EvalPrequential(model,stream_10)
+resultados_10=eval_10.Evaluate(0,stream_10.size)
+print(sum(resultados_10['Recall@20'])/stream_10.size)
+
+model = ISGD(ImplicitData([],[]),200,6, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 eval_11 = EvalPrequential(model,stream_11)
+resultados_11=eval_11.Evaluate(0,stream_11.size)
+print(sum(resultados_11['Recall@20'])/stream_11.size)
 
 """
 res = eval.EvaluateTime(0, 1000)
@@ -149,123 +194,12 @@ print("Update: " + str(sum(res['time_update'])))
 
 """
 
-start_recommend = datetime.now()
-print('start time', start_recommend)
-
-resultados_0=eval_0.Evaluate(0,stream_0.size)
-print(sum(resultados_0['Recall@20'])/stream_0.size) # com hyperparametros otimizados do artigo e o dataset todo deu 0.200 de recall@10
-
-resultados_1=eval_1.Evaluate(0,stream_1.size)
-print(sum(resultados_1['Recall@20'])/stream_1.size)
-
-resultados_2=eval_2.Evaluate(0,stream_2.size)
-print(sum(resultados_2['Recall@20'])/stream_2.size)
-
-resultados_3=eval_3.Evaluate(0,stream_3.size)
-print(sum(resultados_3['Recall@20'])/stream_3.size)
-
-resultados_4=eval_4.Evaluate(0,stream_4.size)
-print(sum(resultados_4['Recall@20'])/stream_4.size)
-
-resultados_5=eval_5.Evaluate(0,stream_5.size)
-print(sum(resultados_5['Recall@20'])/stream_5.size)
-
-resultados_6=eval_6.Evaluate(0,stream_6.size)
-print(sum(resultados_6['Recall@20'])/stream_6.size)
-
-resultados_7=eval_7.Evaluate(0,stream_7.size)
-print(sum(resultados_7['Recall@20'])/stream_7.size)
-
-resultados_8=eval_8.Evaluate(0,stream_8.size)
-print(sum(resultados_8['Recall@20'])/stream_8.size)
-
-resultados_9=eval_9.Evaluate(0,stream_9.size)
-print(sum(resultados_9['Recall@20'])/stream_9.size)
-
-resultados_10=eval_10.Evaluate(0,stream_10.size)
-print(sum(resultados_10['Recall@20'])/stream_10.size)
-
-resultados_11=eval_11.Evaluate(0,stream_11.size)
-print(sum(resultados_11['Recall@20'])/stream_11.size)
-
-
 end_recommend = datetime.now()
 print('end time', end_recommend)
 
 tempo = end_recommend - start_recommend
 print('run time', tempo)
 
-
-# tempo de execução 42 min para single node
-#Recall@20=0.256 (maior que o recall10) no artigo é 0.302
-#two nodes
-#Recall@20_1= 0.4719
-#Recall@20_2= 0.5838
-#media= (0.4719+0.5838)/2=0.52785
-#run time 1:48:39
-
-#6 nodes, #Recall@20
-#0.47564
-#0.58404
-#0.60663
-#0.60952
-#0.60758
-#0.60588
-#media=0.58155
-#run time 7:15:17
-
-#8 nodes Recall@20
-#0.472768
-#0.583885
-#0.604196
-#0.607264
-#0.609735
-#0.608921
-#0.604086
-#0.598165
-#media=0.58613
-#run time 10:02:32
+#recall@20 = 0.474
 
 
-#8 nodes recall20 random seed(2)
-#0.472019
-#0.580753
-#0.603330
-#0.606535
-#0.607539
-#0.604957
-#0.602052
-#0.598922
-#media=0.58451
-
-#12 nodes recall20 random seed(1)
-#0.476633
-#0.583596
-#0.604145
-#0.606532
-#0.607150
-#0.604721
-#0.601108
-#0.596256
-#0.593388
-#0.592384
-#0.586645
-#0.583197
-#media=0.58631
-#run time 15:44:51
-
-#12 nodes recall20 random seed(42)
-#0.473312
-#0.585545
-#0.605927
-#0.610216
-#0.608571
-#0.606329
-#0.603653
-#0.601122
-#0.599189
-#0.592734
-#0.591729
-#0.586447
-#media=0.58873
-#run time 16:24:26
