@@ -30,7 +30,7 @@ for node in range(numeroNodes):
 # 0.1951
 #run time 3:40:22
 
-
+#recall20 ISGD= 0.256
 
 end_recommend = datetime.now()
 print('end time', end_recommend)
