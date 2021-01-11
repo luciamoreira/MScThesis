@@ -27,8 +27,9 @@ for node in range(numeroNodes):
 
 
 #recall20 n=2
-# 
-#run time predicted: 10h for 2 nodes...
+# 0.1951
+#run time 3:40:22
+
 
 
 end_recommend = datetime.now()
