@@ -25,10 +25,17 @@ resultados=eval.Evaluate(0,stream.size)
 for node in range(numeroNodes):
     print('sum(resultados[Recall@20])/stream.size', sum(resultados['Recall@20'])/stream.size)
 
-
+#1 node
+#0.18298
+#runtime 2:13:07
+   
 #recall20 n=2
 # 0.1951
 #run time 3:40:22
+
+#6 nodes 
+#recall20 = 0.2022
+#run time = 9:09:32
 
 #recall20 ISGD= 0.256
 
