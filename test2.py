@@ -37,6 +37,14 @@ for node in range(numeroNodes):
 #recall20 = 0.2022
 #run time = 9:09:32
 
+#8 nodes
+#recall20= 0.2040
+# run time 12:16:38
+
+#12 nodes
+#recall20= 0.20316
+# run time 17:58:27
+
 #recall20 ISGD= 0.256
 
 end_recommend = datetime.now()
