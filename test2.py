@@ -22,8 +22,7 @@ print('start time', start_recommend)
 
 resultados=eval.Evaluate(0,stream.size)
 
-for node in range(numeroNodes):
-    print('sum(resultados[Recall@20])/stream.size', sum(resultados['Recall@20'])/stream.size)
+print('sum(resultados[Recall@20])/stream.size', sum(resultados['Recall@20'])/stream.size)
 
 #1 node
 #0.18298
