@@ -15,7 +15,7 @@ stream = ImplicitData(data['playlist_id'],data['track_id'])
 numeroNodes = 2
 model = BISGD(ImplicitData([],[]),200,6, numeroNodes, learn_rate = 0.35, u_regularization = 0.5, i_regularization = 0.5, use_numba = False)
 
-eval = EvalPrequential(model,stream, metrics = ["Recall@20"], NrNodes = numeroNodes)
+eval = EvalPrequential(model,stream, metrics = ["Recall@20"])
 
 start_recommend = datetime.now()
 print('start time', start_recommend)
