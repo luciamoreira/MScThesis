@@ -50,6 +50,30 @@ print('sum(resultados[Recall@20])/stream.size', sum(resultados['Recall@20'])/str
 # 0.1468
 #run time 2:16:37
 
+#2 nodes
+#0.2033
+#run time 3:30:18
+
+#6 nodes
+#0.2520
+#run time 9:08:43
+
+#8 nodes
+#0.2561
+#run time 12:09:41
+
+#12 nodes
+#0.260
+#run time 17:44:09
+
+#16 nodes
+#0.2639
+#run time 23:45:49
+
+#24 nodes
+#0.2634
+#run time 1 day, 23:03:26.809245
+
 end_recommend = datetime.now()
 print('end time', end_recommend)
 
