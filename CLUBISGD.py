@@ -33,8 +33,7 @@ class CLUBISGD(Model):
     def _InitModel(self):
         self.user_factors = [[np.random.Generator.normal(0.0, 0.1, self.num_factors) for _ in range(self.data.maxuserid + 1)] for _ in range(self.nrNodes)]
         self.item_factors = [[np.random.Generator.normal(0.0, 0.1, self.num_factors) for _ in range(self.data.maxitemid + 1)] for _ in range(self.nrNodes)]
-        #self.kappa_users = [[int(np.random.poisson.rvs(1, size=1)) for _ in range(self.data.maxuserid + 1)] for _ in range(self.nrNodes)]
-
+        
     def BatchTrain(self):
         """
         Trains a new model with the available data.
@@ -60,15 +59,13 @@ class CLUBISGD(Model):
         for node in range(self.nrNodes):
             if len(self.user_factors[node]) == self.data.maxuserid:
                 self.user_factors[node].append(np.random.normal(0.0, 0.1, self.num_factors))
-                #self.kappa_users[node].apppend(int(np.random.poisson.rvs(1, size=1)))
         for node in range(self.nrNodes):
             if len(self.item_factors[node]) == self.data.maxitemid:
                 self.item_factors[node].append(np.random.normal(0.0, 0.1, self.num_factors))
 
 
         for node in range(self.nrNodes):
-            #kappa = int(np.random.poisson(1, size=1))
-
+            
             if self.FuzzyClusters[user][str(node)] > 1/(1.05*self.nrNodes): #higher than 95% from a random cluster allocation probability
                 self._UpdateFactors(user_id, item_id, node)
 
